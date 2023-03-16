@@ -30,10 +30,10 @@ public class MyList<E> {
     }
 
     public E remove(int i) {
-        for (int j = i; j < elements.length - 1; j++) {
+        for (int j = i; j < size; j++) {
             elements[j] = elements[j + 1];
         }
-        elements[elements.length - 1] = null;
+        elements[--size] = null;
         return (E) elements[i];
     }
 
